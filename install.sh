@@ -6,4 +6,4 @@ if [ -e "$SCRIPT_DIR/requirements.txt" ];then
 	pip install -r "$SCRIPT_DIR/requirements.txt"
 fi
 
-install typeconverter.py "$HOME/.local/bin"
+install "$SCRIPT_DIR/typeconverter.py" "$HOME/.local/bin"
