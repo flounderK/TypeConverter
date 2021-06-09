@@ -61,7 +61,7 @@ if __name__ == "__main__":
     # parser.add_argument("value", help="Value to view conversions for")
     # to be able to use the formatting from argparse, this hack is needed to
     # keep negative values from appearing as argument flags
-    known_args, args = parser.parse_known_intermixed_args()
+    known_args, args = parser.parse_known_args()
     # print(args, known_args)
     if not args:
         print("Usage: %s value" % os.path.basename(__file__))
