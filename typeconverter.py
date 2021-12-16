@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 from ctypes import c_uint8, c_int8, c_uint16, c_int16, c_uint32, c_int32, c_uint64, c_int64, c_double, c_float, Structure, Union
+from struct import pack
+from functools import partial
 import argparse
 import re
 import sys
@@ -75,7 +77,8 @@ class TypeConverter(Union):
                                       isinstance(getattr(self, k),
                                                  (float, Structure))])
                           else str(getattr(self, k)))
-                          for k, v in self._fields_])
+                          for k, v in self._fields_] +
+                              ["bytes: %s" % bytes(self)])
 
 
 if __name__ == "__main__":
