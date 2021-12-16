@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from ctypes import c_uint8, c_int8, c_uint16, c_int16, c_uint32, c_int32, c_uint64, c_int64, c_double, c_float, Structure, Union
 import argparse
 import re
